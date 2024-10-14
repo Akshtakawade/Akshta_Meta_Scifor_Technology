@@ -22,7 +22,7 @@ print(unique)
 list1 = [1,2,5,7,9,10]
 print(list1[::-1])
 
-#Count no of odd n even numbers in a list
+#Count number of odd n even numbers in a list
 list1 = [1,2,3,4,5,6,8,9,10,13,14,15,16]
 even=0
 odd=0
@@ -40,7 +40,7 @@ list2 = [3,5]
 is_subset = all(item in list1 for item in list2)
 print(is_subset)
 
-#Max diff btw two consecutive elements in a list
+#Mximum difference between two consecutive elements in a list
 def max_diff(lst):
 return max(abs(lst[i] - lst[i - 1]) for i in range(1, len(lst)))
 numbers = [1, 6, 8, 10, 4]
