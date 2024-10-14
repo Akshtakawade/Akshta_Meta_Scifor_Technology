@@ -15,10 +15,7 @@ print(list1(set(list1)))
 
 #Check if all elements in a list are unique
 list1 = [1,2,5,7,9,10]
-unique = []
-for num in a:
-if num not in unique:
-unique.append(num)
+unique = len(list1)==len(set(list1))
 print(unique)
 
 #Program to reverse list
