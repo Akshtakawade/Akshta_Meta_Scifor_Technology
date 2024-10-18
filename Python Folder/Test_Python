@@ -1,1 +1,8 @@
-
+# What are Pyhon data types?
+Integer - integer are whole numbers, eg - 1,2,3
+Float - floats are Decimal numbers, eg - 1.2, 6.8, 3.25
+Strings -strings are Whole characters, eg- Hi, Python, Data
+Lists - lists are mutable collection of items, eg- [1,2,3], ["hi", "python", "data"]
+Tuples - tuples are immutable collection of items, eg - (1,2,3), ("hi", "python", "data")
+Dictionaries -dictionaries used to store key Value pairs, eg - {"name":"Sam", "age":21}
+Sets - mutable collection of unique values eg - {1,2,3}
