@@ -277,3 +277,102 @@ math_ops = MathOperations()
 print(math_ops.add(1, 2))     
 print(math_ops.add(1, 2, 3))   
 
+
+
+# What is multiple inheritance? How does Python handle it?
+Explain how Python supports multiple inheritance and how the Method
+Resolution Order (MRO) resolves conflicts.
+
+Multiple inheritance ia feature of OOP  this enables a class to combine behaviours from multiple sources 
+python supports multiple inheritance directly. you can define a subclass that inheruts from multiple parent class
+
+class Parent1:
+    def greet(self):
+        return "Hello from Parent1"
+
+class Parent2:
+    def greet(self):
+        return "Hello from Parent2"
+
+class Child(Parent1, Parent2):
+    def greet(self):
+        return "Hello from Child"
+
+child = Child()
+print(child.greet()) 
+
+
+# What are abstract classes and interfaces in Python?
+Discuss the use of abstract base classes (ABC) from the abc module.
+
+Abstract classes and interfaces are used to define common behaviours for group of related classes
+ abstract class is a class cannot be instantianed directly
+ abstarct base classes are created using the abc module, which provides the abc class and the abstract method
+
+ from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def speak(self):
+        pass  
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+dog = Dog()
+cat = Cat()
+
+print(dog.speak())  !
+print(cat.speak())  
+
+
+# What is polymorphism in Python?
+ Explain how different objects can be accessed through the same interface, and
+give examples like method overriding.
+
+Polymorphism - allows to use variable of differnt types of different times
+it enables same method to operate differently based on the object that invokes it
+
+# Base class
+class Animal:
+    def sound(self):
+        raise NotImplementedError("Subclasses must implement this method.")
+
+# Derived class: Dog
+class Dog(Animal):
+    def sound(self):
+        return "Bark!"
+
+# Derived class: Cat
+class Cat(Animal):
+    def sound(self):
+        return "Meow!"
+
+# Derived class: Cow
+class Cow(Animal):
+    def sound(self):
+        return "Moo!"
+
+# Function to demonstrate polymorphism
+def make_animal_sound(animal):
+    print(animal.sound())
+
+# Creating objects
+dog = Dog()
+cat = Cat()
+cow = Cow()
+
+# Using polymorphism
+make_animal_sound(dog)  
+make_animal_sound(cat)  
+make_animal_sound(cow)  
+
+
+# What are getters and setters in Python?
+
+getters and setters are special method used in python to control access to an object's attributes.
+a getter is a method that retrives the value of a private attribute and setters allows to set or modify the value of a private attribute.
