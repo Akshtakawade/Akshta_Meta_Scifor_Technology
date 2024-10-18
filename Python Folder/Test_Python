@@ -1,4 +1,7 @@
 # What are Pyhon data types?
+List the primary data types such as integers, floats, strings, lists, tuples,
+dictionaries, and sets.
+
 Integer - integer are whole numbers, eg - 1,2,3
 Float - floats are Decimal numbers, eg - 1.2, 6.8, 3.25
 Strings -strings are Whole characters, eg- Hi, Python, Data
@@ -7,24 +10,33 @@ Tuples - tuples are immutable collection of items, eg - (1,2,3), ("hi", "python"
 Dictionaries -dictionaries used to store key Value pairs, eg - {"name":"Sam", "age":21}
 Sets - mutable collection of unique values eg - {1,2,3}
 
-my_integer = 12
+integer = 12
+print(integer, type(integer))
 
-my_float = 3.25
+float = 3.25
+print(float, type(float))
 
-my_string = "Python"
+string = "Python"
+print(string, type(string))
 
-my_list = [1,2,3]
-
-my_tuples = (1,2,3)
-
-my_dict = {"name":"Sam", "age":21}
-
-my_set = {1,2,3}
+list = [1,2,3]
+print(list)
 
 
+tuple = (1,2,3)
+print(tuple)
 
-from typing import OrderedDict
+
+dict = {"name":"Sam", "age":21}
+print(dict)
+
+set = {1,2,3}
+print(set)
+
+
+
 # Explain the difference between list, tuple, and set.
+Talk about mutability, ordering, and uniqueness.
  
  Lists - are mutable, means we can change their contents, we can add, remove or modify.
 lists are order ,which means the elemnts maintain their inserting Order, we can add duplicate values also.
@@ -40,6 +52,7 @@ in sets we used curly bracket - {1,2,3,4}
 
 
 How do you handle exceptions in Python?
+Explain the use of try, except, else, finally, and custom exceptions
 
 In python try, except, else, and finally and custom exceptions 
 try block is where we rwrite code that might cause an error if an error happens the except block will handle that cod ewithout crashing or making problem in code
@@ -49,6 +62,8 @@ Customs exception are used to define specific error in your programs
 
 
 # What are Python decorators?
+Explain how decorators modify the behavior of functions or methods.
+
 Decoraters are used  modify the behaviour of function without changing their actual code
 decorators can adding, logging, measuring 
 they can modify inputs 
@@ -68,6 +83,7 @@ add(2, 3)
 
 
 What is a lambda function?
+Discuss anonymous functions and the use of lambda expressions in Python.
 
 lambda function can define with def, they don't need a specific name  or identifier
 it is a simple opertion
@@ -78,6 +94,9 @@ print(result)
 
 
 # How does Python handle multithreading?
+Talk about the Global Interpreter Lock (GIL) and the difference between
+multithreading and multiprocessing.
+
 python handles multithreading through the module, which allow we to create and manage threads.
 we can create threads using the threading module. the thread class allows we to run a function in a seprate thread.
 import threading
@@ -89,6 +108,8 @@ thread.join()
 
 
 # How do you work with files in Python?
+Explain file operations such as open(), read(), write(), and file modes.
+
 open() - fuction is used to open a file and it takes file path for open a FileExistsError
 
 read() - in read mode we can read contents of file using various methos eg - read(size), readline()
