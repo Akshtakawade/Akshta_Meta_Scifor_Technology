@@ -6,3 +6,274 @@ Lists - lists are mutable collection of items, eg- [1,2,3], ["hi", "python", "da
 Tuples - tuples are immutable collection of items, eg - (1,2,3), ("hi", "python", "data")
 Dictionaries -dictionaries used to store key Value pairs, eg - {"name":"Sam", "age":21}
 Sets - mutable collection of unique values eg - {1,2,3}
+
+my_integer = 12
+
+my_float = 3.25
+
+my_string = "Python"
+
+my_list = [1,2,3]
+
+my_tuples = (1,2,3)
+
+my_dict = {"name":"Sam", "age":21}
+
+my_set = {1,2,3}
+
+
+
+from typing import OrderedDict
+# Explain the difference between list, tuple, and set.
+ 
+ Lists - are mutable, means we can change their contents, we can add, remove or modify.
+lists are order ,which means the elemnts maintain their inserting Order, we can add duplicate values also.
+in list we used square bracket - [1,2,3,4]
+
+Tuple - are immutable, means we can't change their contents, we can't add, remove or modify once we created
+tuples also ordered like list and tuples can also duplicate values.
+in tuple we used round bracket - (1,2,3,4)
+
+Sets - are mutable, means we can their contains, but sets only have unique cotains
+in sets we used curly bracket - {1,2,3,4}
+
+
+
+How do you handle exceptions in Python?
+
+In python try, except, else, and finally and custom exceptions 
+try block is where we rwrite code that might cause an error if an error happens the except block will handle that cod ewithout crashing or making problem in code
+else is used to execute code on particular condition
+finally defines a block code to run when the try except else block
+Customs exception are used to define specific error in your programs
+
+
+# What are Python decorators?
+Decoraters are used  modify the behaviour of function without changing their actual code
+decorators can adding, logging, measuring 
+they can modify inputs 
+def l(func):
+    def wrapper(*abc, **efg):
+        print(f"Calling {func.__name__} with arguments: {abc}, {efg}")
+        result = func(*abc, **efg)
+        print(f"{func.__name__} returned: {result}")
+        return result
+    return wrapper
+
+@l
+def add(a, b):
+    return a + b
+add(2, 3)
+
+
+
+What is a lambda function?
+
+lambda function can define with def, they don't need a specific name  or identifier
+it is a simple opertion
+
+add = lambda a, b: a + b
+result = add(3, 5)
+print(result)  
+
+
+# How does Python handle multithreading?
+
+
+
+# How do you work with files in Python?
+open() - fuction is used to open a file and it takes file path for open a FileExistsError
+
+read() - in read mode we can read contents of file using various methos eg - read(size), readline()
+
+write() - we can write a string to the file if file is opend in write mode
+these operations used to interact with text of files
+
+
+
+#What is Object-Oriented Programming (OOP)?
+Explain the basic principles of OOP: encapsulation, abstraction, inheritance, and
+polymorphism.
+
+Object oriented programming is a programming concept of object the basic priciples of OOP are 
+
+Encapsulation - collection of data and methods access to certain components , it is a wrap our data/ methods into single class
+
+Abstraction -  is focus on essential details and hides comples implementation
+
+Inheritance - allows one class to inherit attributes and methods from another code
+
+Polymorphism - allows to use variable of differnt types of different times
+
+
+
+# What is a class and an object in Python?
+Define classes as blueprints for objects and explain how objects are instances of
+classes
+
+In pythom class is a blueprint for crating object it defines attributes and methods that the object created from the class
+
+
+
+# What are instance variables and class variables?
+Discuss the difference between variables defined within methods (instance
+variables) and variables shared across all instances (class variables).
+
+# What are abstract classes and interfaces in Python?
+Discuss the use of abstract base classes (ABC) from the abc module.
+
+Abstract classes and interfaces are used to define common behaviours for group of related classes
+ abstract class is a class cannot be instantianed directly
+ abstarct base classes are created using the abc module, which provides the abc class and the abstract method
+
+ from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def speak(self):
+        pass  
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+dog = Dog()
+cat = Cat()
+
+print(dog.speak())  !
+print(cat.speak())  
+
+
+ 
+ In python, variables defined within classes can be catergorized into instance variables and class variables 
+
+ instance variable are define within methods, they are unique to each instance, typically created using "self"
+
+ class girl:
+    def __init__(self, name, age):
+        self.name = name  
+        self.age = age    
+
+girl1 = girl("Sam", 10)
+girl2 = girl("ana", 5)
+
+print(girl1.name)  
+print(girl2.name)  
+
+
+
+
+#What is the purpose of the __init__ method?
+Explain how __init__ initializes objects and the role of the constructor.
+_init_ is used to invoke the class , it is known as the constructor 
+_init_ method allows we to set intial values for object 
+when we pass the an object from a class, you can pass arguments to the class, whic are then recieved by the _init method
+
+class girl:
+    def __init__(self, name, age):
+        self.name = name  
+        self.age = age    emacs_insert_mode
+girl1 = Dog("Sam", 10)
+girl2 = Dog("Ann", 5)
+
+print(girl1.name)  
+print(girl2.age)  
+
+
+
+
+# What are self and cls?
+Describe how self refers to the instance and cls refers to the class in methodss
+
+self and cls are used to refer to the instance of a class and the class itself
+self is the first parameter of instance method
+it allows acces to the instance's attributes and methods
+
+class dog:
+    def __init__(self, name):
+        self.name = name  
+
+    def bark(self):
+        return f"{self.name} says woof!"  
+
+dog1 = Dog("Buddy")
+print(dog1.bark()) 
+
+
+
+
+# What is inheritance?
+Discuss how one class can inherit methods and attributes from another class.
+
+inheritance is the concept of object oriented programming that allows one class (child or sub class) from another class (parent class)
+ a subclass can extended or modify the behaviour of its superclass
+ the subclass can provid ea specific implementation of a method that is alredy defined in the superclass
+
+ # Parent class
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return "Some sound"
+
+class Dog(Animal):
+    def speak(self):
+        return f"{self.name} says woof!"  
+
+class Cat(Animal):
+    def speak(self):
+        return f"{self.name} says meow!"  
+
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
+print(dog.speak())  
+print(cat.speak())  
+
+
+
+#Explain method overriding and method overloadin
+Differentiate between changing the functionality of a method in a subclass
+(overriding) and using multiple methods with the same name but different
+parameters (overloading).
+
+Overriding and overloading are two concept in OOP relate to behave how methods behave in Classes
+overriding changes the behaviour pof an inherited method in a subclass
+it is used when a subclass wants to provide a specific implementation of a method.
+
+overloading allows multiple methods with same name
+it is used  when a method needs to perform similar operations with different types or number of input
+
+#Overriding
+ class Animal:
+    def speak(self):
+        return "Some sound"
+
+class Dog(Animal):
+    def speak(self):  
+        return "Woof!"
+
+class Cat(Animal):
+    def speak(self):  
+        return "Meow!"
+
+dog = Dog()
+cat = Cat()
+
+print(dog.speak())  
+print(cat.speak())  
+
+
+# Overloading
+class MathOperations:
+    def add(self, a, b, c=0):  
+        return a + b + c
+
+math_ops = MathOperations()
+
+print(math_ops.add(1, 2))     
+print(math_ops.add(1, 2, 3))   
+
