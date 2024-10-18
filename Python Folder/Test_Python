@@ -78,7 +78,14 @@ print(result)
 
 
 # How does Python handle multithreading?
-
+python handles multithreading through the module, which allow we to create and manage threads.
+we can create threads using the threading module. the thread class allows we to run a function in a seprate thread.
+import threading
+def worker():
+    print("Thread is running")
+thread = thread.Thread(target=worker)
+thread.start()
+thread.join()
 
 
 # How do you work with files in Python?
