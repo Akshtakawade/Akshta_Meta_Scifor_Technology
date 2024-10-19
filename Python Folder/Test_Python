@@ -55,7 +55,7 @@ How do you handle exceptions in Python?
 Explain the use of try, except, else, finally, and custom exceptions
 
 In python try, except, else, and finally and custom exceptions 
-try block is where we rwrite code that might cause an error if an error happens the except block will handle that cod ewithout crashing or making problem in code
+try block is where we rerite code that might cause an error if an error happens the except block will handle that cod ewithout crashing or making problem in code
 else is used to execute code on particular condition
 finally defines a block code to run when the try except else block
 Customs exception are used to define specific error in your programs
@@ -404,3 +404,27 @@ make_animal_sound(cow)
 
 getters and setters are special method used in python to control access to an object's attributes.
 a getter is a method that retrives the value of a private attribute and setters allows to set or modify the value of a private attribute.
+
+class Person:
+    def __init__(self, name, age):
+        self.__name = name  
+        self.__age = age
+    @property
+    def name(self):
+        return self.__name
+    @name.setter
+    def name(self, new_name):
+        if isinstance(new_name, str) and new_name:
+            self.__name = new_name
+
+
+
+# What is a static method and a class method in Python?
+Clarify the difference between instance methods, static methods
+(@staticmethod), and class methods (@classmethod).
+
+class Math:
+    @staticmethod
+    def add(a,b):
+        return a+b
+        print(Math.add(5,3))
