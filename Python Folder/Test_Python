@@ -55,7 +55,7 @@ How do you handle exceptions in Python?
 Explain the use of try, except, else, finally, and custom exceptions
 
 In python try, except, else, and finally and custom exceptions 
-try block is where we rerite code that might cause an error if an error happens the except block will handle that cod ewithout crashing or making problem in code
+try block is where we rerite code that might cause an error if an error happens the except block will handle that code without crashing or making problem in code
 else is used to execute code on particular condition
 finally defines a block code to run when the try except else block
 Customs exception are used to define specific error in your programs
