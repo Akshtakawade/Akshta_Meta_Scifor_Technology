@@ -1,1 +1,11 @@
+# What are decorators in python? Provide a code of same
+Decorators in Python are a way to add extra functionality to functions without changing their actual code. 
+we can think of a decorator as a wrapper that enhances the original function.
+
+
+def Training(text): 
+    return text.upper() 
+print(Training('Data Science')) 
+op = Training 
+print(op('Training')) 
 
