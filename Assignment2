@@ -1,1 +1,31 @@
+Github is a website that helps pepole work together on code 
+It uses Git, a tool that tracks changes to files 
+
+Host project - store your code online
+Track changes - see what changes were made and who made them
+collaborate - work with others through feature like pull request ans issues
+connect - follow other developers and dicover projects
+
+The concept of github revolves around collaboration and version control for software developmenr 
+1 Repositories - is a storge space for our project. it contain all files like coding, documenntation and other resources, as well as a history of changes made to those files
+2 Commit - are use for tarcking progress, managing changes and collaboration. they maintain a clear and organized history of your project
+3 Merge - Combining chnages from one branch into another
+4 Branch - is a separte line of development in a repository. it allows multiple develeopers to work on diff feature without interfering with each other's work
+5 Pull request - is a way to propose changes to a repositary 
+6 Head - helps to track the current position in your project commit history
+
+Creating new git repository in staging area - git init
+
+Operations
+add file in staging area - git add "filename"
+commite change sto local repository - git commit-m "message"
+show the diff between commits, files or working file - git diff
+show the current postion of workling file - git status
+show the commit history (how much we commit) - git log
+
+Branch
+create new branch - git branch "name"
+move to branch to branch - git checkout branch "branchname"
+merging branch - git merge branch "branchame"
+deleting branch - git branch-d "branchname"
 
