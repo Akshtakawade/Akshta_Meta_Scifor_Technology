@@ -17,15 +17,17 @@ The concept of github revolves around collaboration and version control for soft
 Creating new git repository in staging area - git init
 
 Operations
-add file in staging area - git add "filename"
-commite change sto local repository - git commit-m "message"
-show the diff between commits, files or working file - git diff
-show the current postion of workling file - git status
-show the commit history (how much we commit) - git log
+Add file in staging area - git add "filename"
+Commite change sto local repository - git commit-m "message"
+Show the diff between commits, files or working file - git diff
+Show the current postion of workling file - git status
+Show the commit history (how much we commit) - git log
 
 Branch
-create new branch - git branch "name"
-move to branch to branch - git checkout branch "branchname"
-merging branch - git merge branch "branchame"
-deleting branch - git branch-d "branchname"
+Create new branch - git branch "name"
+Move to branch to branch - git checkout branch "branchname"
+Merging branch - git merge branch "branchame"
+Deleting branch - git branch-d "branchname"
+
+
 
